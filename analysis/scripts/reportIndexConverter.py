@@ -55,7 +55,7 @@ class ReportIndexConverter:
         return pd.DataFrame(
             columns=[
                 "Ticker",
-                "Data",
+                "Date",
                 "ReturnOnAssets", 
                 "ReturnOnEquity",  
                 "CurrentRatio", 
@@ -68,15 +68,15 @@ class ReportIndexConverter:
                 ], 
             data=np.array([
                 df["Ticker"],
-                df["Data"],
-                ReportIndexConversion.calculationReturnOnAssets(df),
-                ReportIndexConversion.calculationReturnOnEquity(df),
-                ReportIndexConversion.calculationCurrentRatio(df),
-                ReportIndexConversion.calculationQuickRatio(df),
-                ReportIndexConversion.calculationCashRatio(df),
-                ReportIndexConversion.calculationDebtRatio(df),
-                ReportIndexConversion.calculationDebtToEquityRatio(df),
-                ReportIndexConversion.calculationEBITDA(df),
-                ReportIndexConversion.calculationEBIT(df)
+                df["Date"],
+                ReportIndexConverter.calculationReturnOnAssets(df),
+                ReportIndexConverter.calculationReturnOnEquity(df),
+                ReportIndexConverter.calculationCurrentRatio(df),
+                ReportIndexConverter.calculationQuickRatio(df),
+                ReportIndexConverter.calculationCashRatio(df),
+                ReportIndexConverter.calculationDebtRatio(df),
+                ReportIndexConverter.calculationDebtToEquityRatio(df),
+                ReportIndexConverter.calculationEBITDA(df),
+                ReportIndexConverter.calculationEBIT(df)
                 ]).T,
             index = df.index)
