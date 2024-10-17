@@ -1,9 +1,9 @@
-jupyter    >= 1.0.0
-numpy      >= 2.0.0
-matplotlib >= 3.9.1
-numpy      >= 2.0.0
-pandas     >= 2.2.2
-bs4        >= 0.0.2
-scipy      >= 1.14.0
-seaborn    >= 0.13.2
-scikit-learn >= 1.5.2
+jupyter    
+numpy      
+matplotlib 
+numpy      
+pandas     
+bs4        
+scipy      
+seaborn    
+scikit-learn 
