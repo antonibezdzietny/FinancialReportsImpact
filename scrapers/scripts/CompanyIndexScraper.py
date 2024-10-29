@@ -4,11 +4,10 @@ https://www.biznesradar.pl/
 """
 
 from bs4 import BeautifulSoup
-from enum import Enum
 import pandas as pd
 import numpy as np
 import requests
-
+from enum import Enum
 
 class CompanyIndexScraper:
     class IndexType(Enum):

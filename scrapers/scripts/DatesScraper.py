@@ -13,7 +13,7 @@ class DatesScraper:
             return f"{year[0]}/R"
         elif "QSr1" in title or "QS 1" in title or "Q1" in title or "Q 1" in title:
             return f"{year[0]}/Q1"
-        elif "QSr2" in title or "QS 2" in title or "Q2" in title or "Q 2" in title:
+        elif "QSr2" in title or "QS 2" in title or "Q2" in title or "Q 2" in title or "P" in title or "PS" in title:
             return f"{year[0]}/Q2"
         elif "QSr3" in title or "QS 3" in title or "Q3" in title or "Q 3" in title:
             return f"{year[0]}/Q3"
@@ -44,6 +44,7 @@ class DatesScraper:
         espi_reports["title"] = espi_reports["title"].apply(lambda x : DatesScraper.__cast_espi_title(x))
         espi_reports = espi_reports.dropna()
         espi_reports = espi_reports.drop_duplicates(subset="title")
-        espi_reports.columns = ["Q_DATES", "D_DATES"]
+        espi_reports.columns = ["Q_DATE", "D_DATE"]
+        espi_reports = espi_reports.set_index("Q_DATE")
 
         return espi_reports
