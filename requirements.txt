@@ -6,4 +6,5 @@ pandas
 bs4        
 scipy      
 seaborn    
-scikit-learn 
+scikit-learn
+statsmodelss 
